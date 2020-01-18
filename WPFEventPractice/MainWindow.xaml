@@ -1,0 +1,23 @@
+﻿<Window x:Class="WPFEventPractice1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFEventPractice1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="450">
+    <Window.Resources>
+        <local:BrushColorConverter x:Key="BrushColorConverter"></local:BrushColorConverter>
+    </Window.Resources>
+    <Grid ButtonBase.Click="Grid_Click">
+        <Border x:Name="MyBorder" BorderBrush="Blue" Margin="5" BorderThickness="5" CornerRadius="10" MouseEnter="StackPanel_MouseEnter" MouseDown="MyBorder_MouseDown">
+            <StackPanel x:Name="MyStackPanel" MouseEnter="StackPanel_MouseEnter" MouseDown="MyBorder_MouseDown">
+                <Ellipse x:Name="EllipseFigure" Height="50" Width="350" Fill="{Binding ElementName=CheckBoxBtn, Path=IsChecked, Converter={StaticResource BrushColorConverter}}" Margin="10,20,10,0" MouseEnter="StackPanel_MouseEnter" MouseDown="MyBorder_MouseDown"/>
+                <Button x:Name="RectangleContainterBtn" Margin="10" Width="350" MouseEnter="StackPanel_MouseEnter" MouseDown="MyBorder_MouseDown">
+                    <Rectangle x:Name="RectangleFigure" Height="50" Width="250" Margin="5" Fill="Aqua" RadiusX="10" RadiusY="10" MouseEnter="StackPanel_MouseEnter" MouseDown="MyBorder_MouseDown"/>
+                </Button>
+                <CheckBox x:Name="CheckBoxBtn" IsChecked="True" Content="Is ellipse filled?" FontWeight="Bold" BorderThickness="2" BorderBrush="Black" Margin="10" MouseEnter="StackPanel_MouseEnter" MouseDown="MyBorder_MouseDown"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

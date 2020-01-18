@@ -1,0 +1,62 @@
+﻿<Window x:Class="WPFEventPractice2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFEventPractice2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="500">
+    <Window.CommandBindings>
+        <CommandBinding Command="local:MyCustomCommands.Show" Executed="ShowCommandExecuted" CanExecute="CommandCanExecute"/>
+        <CommandBinding Command="ApplicationCommands.New" Executed="NewCommandExecuted" CanExecute="CommandCanExecute"/>
+        <CommandBinding Command="ApplicationCommands.Delete" Executed="DeleteCommandExecuted" CanExecute="CommandCanExecute"/>
+    </Window.CommandBindings>
+    <Grid DataContext="{Binding ElementName=MyDataGrid, Path=SelectedItem}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="235*"/>
+            <ColumnDefinition Width="257*"/>
+            <ColumnDefinition Width="257*"/>
+            <ColumnDefinition Width="257*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="395*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4">
+            <ToolBar VerticalAlignment="Top">
+                <Menu>
+                    <MenuItem Header="_File">
+                        <MenuItem Header="_New" Command="New"/>
+                        <MenuItem Header="_Delete" Command="Delete"/>
+                    </MenuItem>
+                    <MenuItem Header="_Tools">
+                        <MenuItem Header="_Show" Command="local:MyCustomCommands.Show"/>
+                    </MenuItem>
+                </Menu>
+            </ToolBar>
+            <DataGrid x:Name="MyDataGrid" Margin="10" Height="342" ItemsSource="{Binding}" AutoGenerateColumns="False" HorizontalGridLinesBrush="Gray" RowBackground="DarkGray" AlternatingRowBackground="White">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Width="40" Binding="{Binding Path=Id}"/>
+                    <DataGridTextColumn Header="Name" Width="150" Binding="{Binding Path=Name}"/>
+                    <DataGridTextColumn Header="Department" Width="*" Binding="{Binding Path=Department}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+        <Label Target="{Binding ElementName=NameTextBlock}" Content="_Name" Margin="5" Grid.Column="0" Grid.Row="1"/>
+        <TextBlock Name="NameTextBlock" Grid.Column="1" Margin="10" Grid.Row="1" Text="{Binding Path=Name}"/>
+
+        <Label Content="_Hired Date" Margin="5" Grid.Column="0" Grid.Row="2"/>
+        <TextBlock Grid.Column="1" Margin="10" Grid.Row="2" Text="{Binding Path=HiredDate}"/>
+
+        <Label Content="_Department" Grid.Column="2" Margin="5" Grid.Row="1"/>
+        <TextBlock Grid.Column="3" Margin="10" Grid.Row="1" Text="{Binding Path=Department}"/>
+
+        <CheckBox Content="Is _Manager?" IsChecked="{Binding Path=IsManager}" BorderThickness="2" BorderBrush="Black" Grid.Column="2" Margin="5" Grid.Row="2" HorizontalContentAlignment="Center" VerticalAlignment="Center" IsEnabled="False"/>
+
+        <Button Content="New" Margin="10" Grid.Row="3" Command="ApplicationCommands.New"/>
+        <Button Content="Delete" Margin="10" Grid.Row="3" Grid.Column="1" Command="ApplicationCommands.Delete"/>
+        <Button Content="Show" Grid.Column="3" Margin="10" Grid.Row="3" Command="local:MyCustomCommands.Show"/>
+    </Grid>
+</Window>
