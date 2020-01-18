@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFTask1", "WPFTask1\WPFTask1.csproj", "{A2E81EF3-B293-4530-9D83-C8827F796067}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFTask2", "WPFTask2\WPFTask2.csproj", "{1CBA9C49-8767-48A5-82F3-525E237CD832}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFTask3", "WPFTask3\WPFTask3.csproj", "{F8835D8B-D894-4C94-99F6-0FA9B078259F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2E81EF3-B293-4530-9D83-C8827F796067}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2E81EF3-B293-4530-9D83-C8827F796067}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2E81EF3-B293-4530-9D83-C8827F796067}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2E81EF3-B293-4530-9D83-C8827F796067}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CBA9C49-8767-48A5-82F3-525E237CD832}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CBA9C49-8767-48A5-82F3-525E237CD832}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CBA9C49-8767-48A5-82F3-525E237CD832}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CBA9C49-8767-48A5-82F3-525E237CD832}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8835D8B-D894-4C94-99F6-0FA9B078259F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8835D8B-D894-4C94-99F6-0FA9B078259F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8835D8B-D894-4C94-99F6-0FA9B078259F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8835D8B-D894-4C94-99F6-0FA9B078259F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6686E1DE-056B-4111-9109-9FCF6B59C576}
+	EndGlobalSection
+EndGlobal
