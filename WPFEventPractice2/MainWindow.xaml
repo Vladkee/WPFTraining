@@ -1,0 +1,41 @@
+﻿<Window x:Class="WPFEventPractice2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFEventPractice2"
+        xmlns:viewModel="clr-namespace:WPFEventPractice2.ViewModel"
+        xmlns:view="clr-namespace:WPFEventPractice2.View"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="500">
+    <Window.DataContext>
+        <viewModel:MainWindowViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="235*"/>
+            <ColumnDefinition Width="257*"/>
+            <ColumnDefinition Width="257*"/>
+            <ColumnDefinition Width="257*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4">
+            <DataGrid x:Name="MyDataGrid" Margin="10" Height="342" ItemsSource="{Binding Path=ListOfEmployees}" SelectedItem="{Binding Path=SelectedEmployee}" AutoGenerateColumns="False" HorizontalGridLinesBrush="Gray" RowBackground="DarkGray" AlternatingRowBackground="White" CanUserAddRows="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Width="40" Binding="{Binding Path=Id}"/>
+                    <DataGridTextColumn Header="Name" Width="150" Binding="{Binding Path=Name}"/>
+                    <DataGridTextColumn Header="Department" Width="*" Binding="{Binding Path=Department}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+        <view:CustomUserControl Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="2" DataContext="{Binding Path=SelectedEmployee}"/>
+        <Button Content="New" Margin="10" Grid.Row="3" Command="{Binding Path=NewCommand}"/>
+        <Button Content="Delete" Margin="10" Grid.Row="3" Grid.Column="1" Command="{Binding Path=DeleteCommand}"/>
+        <Button Content="Show" Grid.Column="3" Margin="10" Grid.Row="3" Command="{Binding Path=ShowCommand}"/>
+    </Grid>
+</Window>
