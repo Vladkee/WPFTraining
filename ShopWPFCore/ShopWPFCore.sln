@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopWPFCore", "ShopWPFCore\ShopWPFCore.csproj", "{1145B163-5384-4095-9175-6EA4797CC1AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.DAL", "Shop.DAL\Shop.DAL.csproj", "{CEF545CD-535B-431A-8338-EEE40DE3901C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1145B163-5384-4095-9175-6EA4797CC1AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1145B163-5384-4095-9175-6EA4797CC1AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1145B163-5384-4095-9175-6EA4797CC1AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1145B163-5384-4095-9175-6EA4797CC1AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEF545CD-535B-431A-8338-EEE40DE3901C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEF545CD-535B-431A-8338-EEE40DE3901C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEF545CD-535B-431A-8338-EEE40DE3901C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEF545CD-535B-431A-8338-EEE40DE3901C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B37C3491-AA19-4283-9EE0-6093A9DBFFF0}
+	EndGlobalSection
+EndGlobal
