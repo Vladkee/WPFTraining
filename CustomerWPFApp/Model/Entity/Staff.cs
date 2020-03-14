@@ -19,7 +19,7 @@ namespace Model.Entity
 
         public bool IsActive { get; set; }
 
-        public int ManagerId { get; set; }
+        public int? ManagerId { get; set; }
 
         public int StoreId { get; set; }
 

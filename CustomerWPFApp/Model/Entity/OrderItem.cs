@@ -14,7 +14,7 @@ namespace Model.Entity
 
         public decimal ListPrice { get; set; }
 
-        public int Discount { get; set; }
+        public int? Discount { get; set; }
 
         public Order Order { get; set; }
 
