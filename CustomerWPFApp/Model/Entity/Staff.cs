@@ -26,5 +26,10 @@ namespace Model.Entity
         public Store Store { get; set; }
 
         public ObservableCollection<Order> Orders { get; set; }
+
+        public override string ToString()
+        {
+            return $"{FirstName} {LastName}";
+        }
     }
 }

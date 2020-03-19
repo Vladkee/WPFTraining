@@ -28,5 +28,10 @@ namespace Model.Entity
         public ObservableCollection<Order> Orders { get; set; }
 
         public ObservableCollection<Stock> Stocks { get; set; }
+
+        public override string ToString()
+        {
+            return $"{StoreId} - {StoreName}";
+        }
     }
 }
